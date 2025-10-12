@@ -4,17 +4,17 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <h1 className="header-title">My First React Project</h1>
+      <h1 className="header-title">האתר של אסי קריניץ</h1>
       <nav>
         <ul className="nav-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">בית</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">קצת עלי</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">צור קשר</Link>
           </li>
         </ul>
       </nav>
