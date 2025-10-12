@@ -1,7 +1,21 @@
+/* Footer container */
 .footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px 0;
   font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Stick to bottom */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: footer text hover effect */
+.footer p {
+  margin: 0;
 }

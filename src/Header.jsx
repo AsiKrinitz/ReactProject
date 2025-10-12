@@ -1,17 +1,19 @@
+import "./Header.css";
+
 function Header() {
   return (
-    <header>
-      <h1>This is my 1st React Project</h1>
+    <header className="header">
+      <h1 className="header-title">My First React Project</h1>
       <nav>
-        <ul>
+        <ul className="nav-links">
           <li>
-            <a href="https://www.google.com">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="https://www.google.com">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="https://www.google.com">Contact Us</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
