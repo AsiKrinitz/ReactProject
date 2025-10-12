@@ -5,7 +5,7 @@ import Home from "./Home";
 
 function App() {
   return (
-    <div>
+    <div className="coverImage">
       <h1>Asi React Project ♥</h1>
       <Header />
       <Home />
