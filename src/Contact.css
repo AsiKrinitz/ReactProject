@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* make body and html take full viewport height */
+}
+
+.contactImage {
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("./assets/Asi4.jpg"); /* your image */
+  background-size: cover; /* cover the whole area */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+  color: white; /* text will show on top of the image */
+}

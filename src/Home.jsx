@@ -1,43 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
-  const [name, setName] = useState("");
-  const [myString, setMyString] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // For now just log the values
-    console.log("Name:", name);
-    console.log("My String:", myString);
-
-    // Clear inputs
-    setName("");
-    setMyString("");
-  };
+  const navigate = useNavigate(); // ← React Router hook
 
   return (
-    <div className="home">
+    <div className="homeImage">
       <h2>Welcome to My First React Project!</h2>
-      <p>Enter your name and a string below:</p>
 
-      <form className="input-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Your String"
-          value={myString}
-          onChange={(e) => setMyString(e.target.value)}
-          required
-        />
-        <button type="submit">Save</button>
-      </form>
+      <button onClick={() => navigate("/secret")} className="secret-button">
+        Go to Secret Page
+      </button>
     </div>
   );
 }
