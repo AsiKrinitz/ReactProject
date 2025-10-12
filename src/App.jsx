@@ -5,6 +5,7 @@ import Home from "./Home";
 import Secret from "./Secret";
 import About from "./About";
 import Contact from "./Contact";
+import Projects from "./projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/secret" element={<Secret />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
 
         <Footer />

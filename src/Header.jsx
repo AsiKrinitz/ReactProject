@@ -16,6 +16,9 @@ function Header() {
           <li>
             <Link to="/contact">צור קשר</Link>
           </li>
+          <li>
+            <Link to="/projects">פרויקטים</Link>
+          </li>
         </ul>
       </nav>
     </header>
