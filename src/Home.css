@@ -2,48 +2,57 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* make body and html take full viewport height */
+  height: 100%;
+  font-family: "Heebo", sans-serif;
+  color: #333;
+  background: linear-gradient(to right, #f8f9fa, #eef2f3);
 }
 
+/* Full-page hero section */
 .homeImage {
-  background: linear-gradient(to right, #f8f9fa, #eef2f3);
-  min-height: 100vh;
+  min-height: calc(100vh - 120px); /* subtract header+footer height */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: "Heebo", sans-serif;
-  color: #333;
+  justify-content: flex-start; /* align content to the top */
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px 120px; /* smaller top padding to remove large gap */
+  box-sizing: border-box;
 }
 
+/* Page title */
 .title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #2c3e50;
-  margin-bottom: 30px;
+  margin: 0 0 25px 0; /* smaller top margin */
   animation: fadeInDown 1s ease;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
 }
 
+/* Card content */
 .intro-card {
   background: white;
-  max-width: 1000px;
-  padding: 25px 35px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 850px;
+  width: 90%;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
   line-height: 1.8;
   animation: fadeIn 1.2s ease;
+  text-align: justify;
 }
 
 .intro-card p {
   margin-bottom: 15px;
-  font-size: 1.1rem;
+  font-size: 20px;
 }
 
 strong {
   color: #007acc;
 }
 
+/* Simple fade animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -63,5 +72,17 @@ strong {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .intro-card {
+    padding: 20px;
   }
 }

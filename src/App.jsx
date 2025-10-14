@@ -9,9 +9,11 @@ import Projects from "./projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  if (window.location.pathname === "/ReactProject") {
+    window.location.replace("/ReactProject/");
+  }
   return (
     <Router basename="/ReactProject">
-      {" "}
       {/* <-- must wrap all routes */}
       <div>
         <Header />
