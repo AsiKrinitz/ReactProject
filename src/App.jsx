@@ -5,7 +5,7 @@ import Home from "./Home";
 import Secret from "./Secret";
 import About from "./About";
 import Contact from "./Contact";
-import Projects from "./projects";
+import Projects from "./Projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router basename="/ReactProject">
       {/* <-- must wrap all routes */}
-      <div>
+      <div className="appRoot">
         <Header />
 
         <Routes>

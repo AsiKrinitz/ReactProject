@@ -1,19 +1,59 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* make body and html take full viewport height */
-}
-
 .contactImage {
-  min-height: 100vh; /* full viewport height */
+  direction: rtl; /* RTL support */
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  /* background-image: url("./assets/Asi4.jpg");  */
-  background-size: cover; /* cover the whole area */
-  background-position: center; /* center the image */
-  background-repeat: no-repeat;
-  color: black; /* text will show on top of the image */
+  padding: 60px 20px;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+.contactImage h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--fg);
+}
+
+.contactName {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f39c12; /* Accent color */
+}
+
+.contactCard {
+  background-color: #111; /* slightly lighter black for contrast */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contactCard p {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--fg);
+  transition: color 0.3s ease;
+}
+
+.contactCard p:hover {
+  color: #f39c12; /* accent color on hover */
+}
+
+/* Optional: subtle separator line */
+.contactCard::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #f39c12;
+  margin-bottom: 15px;
+  border-radius: 2px;
 }

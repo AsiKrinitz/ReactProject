@@ -10,9 +10,9 @@ function Header() {
           <li>
             <Link to="/">בית</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/about">קצת עלי</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact">צור קשר</Link>
           </li>

@@ -1,6 +1,137 @@
 .projectsSection {
-  font-size: 30px;
-  color: rgb(255, 0, 0);
-  text-decoration: underline;
   text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+  background: #0e0e0e;
+  min-height: 100vh;
+}
+
+.projectCard {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.projectCard h2 {
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.projectCard p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.techIcons {
+  display: flex;
+  gap: 20px;
+  font-size: 30px;
+  color: #f39c12;
+  margin: 20px 0;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.featuresList li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.githubBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  border: 1px solid #444;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.githubBtn:hover {
+  background: #f39c12;
+  border-color: #f39c12;
+  color: #111;
+}
+
+.techIcons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f39c12;
+  font-size: 40px;
+  transition: transform 0.3s ease;
+}
+
+.techItem:hover {
+  transform: translateY(-5px);
+}
+
+.techItem h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 10px 0 5px 0;
+}
+
+.techItem p {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.projectTitleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* space between logo and titles */
+  margin-bottom: 20px;
+}
+
+.projectTitleGroup .mainTitle {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.projectTitleGroup .subTitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.projectLogo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 8px rgba(243, 156, 18, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.projectLogo:hover {
+  transform: scale(1.05);
 }
