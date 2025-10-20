@@ -16,7 +16,7 @@
 }
 
 .projectCard h2 {
-  color: #f39c12;
+  color: #9300dfc4;
   margin-bottom: 10px;
 }
 
@@ -29,7 +29,7 @@
   display: flex;
   gap: 20px;
   font-size: 30px;
-  color: #f39c12;
+  color: #9300dfc4;
   margin: 20px 0;
 }
 
@@ -67,8 +67,8 @@
 }
 
 .githubBtn:hover {
-  background: #f39c12;
-  border-color: #f39c12;
+  background: #9300dfc4;
+  border-color: #9300dfc4;
   color: #111;
 }
 
@@ -84,7 +84,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #f39c12;
+  color: #9300dfc4;
   font-size: 40px;
   transition: transform 0.3s ease;
 }

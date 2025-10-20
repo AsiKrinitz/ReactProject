@@ -15,7 +15,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 40px;
-  color: #f39c12; /* accent color for the heading */
+  color: #9300dfc4; /* accent color for the heading */
   line-height: 1.2;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .intro-card p strong {
-  color: #f39c12; /* accent color for names, tech, schools */
+  color: #9300dfc4; /* accent color for names, tech, schools */
 }
 
 .intro-card p:last-child {

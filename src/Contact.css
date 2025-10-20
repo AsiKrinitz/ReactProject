@@ -22,7 +22,7 @@
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: bold;
-  color: #f39c12; /* Accent color */
+  color: #9300dfc4; /* Accent color */
 }
 
 .contactCard {
@@ -45,7 +45,7 @@
 }
 
 .contactCard p:hover {
-  color: #f39c12; /* accent color on hover */
+  color: #9300dfc4; /* accent color on hover */
 }
 
 /* Optional: subtle separator line */
@@ -53,7 +53,7 @@
   content: "";
   width: 60px;
   height: 2px;
-  background-color: #f39c12;
+  background-color: #9300dfc4;
   margin-bottom: 15px;
   border-radius: 2px;
 }
