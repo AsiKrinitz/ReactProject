@@ -17,12 +17,7 @@ function Projects() {
       </motion.h1>
       <div className="projectCard">
         {/* --- Title + Subtitle --- */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="projectTitleGroup"
-        >
+        <div className="projectTitleGroup">
           <img
             className="projectLogo"
             src={JobFinderLogo}
@@ -30,7 +25,7 @@ function Projects() {
           />
           <h2 className="mainTitle">JobFinder</h2>
           <h3 className="subTitle">אתר חיפוש עבודה חכם</h3>
-        </motion.div>
+        </div>
 
         <p>
           אתר שבניתי כפרויקט גמר במכללה, שנועד לחבר בין מחפשי עבודה לבין

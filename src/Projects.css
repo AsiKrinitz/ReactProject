@@ -5,14 +5,13 @@
   background: #0e0e0e;
   min-height: 100vh;
 }
-
 .projectCard {
   max-width: 800px;
   margin: 40px auto;
   background: #1a1a1a;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.06);
 }
 
 .projectCard h2 {
@@ -23,14 +22,18 @@
 .projectCard p {
   line-height: 1.7;
   font-size: 1rem;
+  color: #dcdcdc;
 }
 
+/* Technologies */
 .techIcons {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
   font-size: 30px;
   color: #9300dfc4;
-  margin: 20px 0;
 }
 
 .featuresList {
@@ -38,9 +41,8 @@
   padding: 0;
   margin-top: 10px;
 }
-
 .featuresList li {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   padding: 8px 12px;
   border-radius: 10px;
   margin-bottom: 8px;
@@ -52,9 +54,8 @@
   gap: 15px;
   margin-top: 25px;
 }
-
 .githubBtn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   background: #111;
@@ -63,13 +64,14 @@
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.12s ease;
 }
 
 .githubBtn:hover {
   background: #9300dfc4;
   border-color: #9300dfc4;
   color: #111;
+  transform: translateY(-3px);
 }
 
 .techIcons {
@@ -86,7 +88,7 @@
   align-items: center;
   color: #9300dfc4;
   font-size: 40px;
-  transition: transform 0.3s ease;
+  transition: transform 0.28s ease;
 }
 
 .techItem:hover {
@@ -125,13 +127,42 @@
 }
 
 .projectLogo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 0 8px rgba(243, 156, 18, 0.4));
-  transition: transform 0.2s ease;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 50%; /* make it a perfect circle */
+  overflow: hidden;
+  padding: 6px; /* small inner gap to act like a ring */
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
 }
 
 .projectLogo:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  opacity: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .projectLogo {
+    width: 96px;
+    height: 96px;
+    padding: 5px;
+  }
+
+  .projectCard {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .projectTitleGroup .mainTitle {
+    font-size: 1.6rem;
+  }
 }
