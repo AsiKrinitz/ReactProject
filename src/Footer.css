@@ -1,18 +1,13 @@
 /* Footer container */
 .footer {
-  background-color: #333;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--fg, #fff);
   text-align: center;
   padding: 20px 0;
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  /* Stick to bottom */
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Optional: footer text hover effect */

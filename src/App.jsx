@@ -7,6 +7,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ErrorPage } from "./ErrorPage";
 
 function App() {
   if (window.location.pathname === "/ReactProject") {
@@ -18,13 +19,16 @@ function App() {
       <div className="appRoot">
         <Header />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/secret" element={<Secret />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/secret" element={<Secret />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </main>
 
         <Footer />
       </div>
