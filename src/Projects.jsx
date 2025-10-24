@@ -84,6 +84,21 @@ function Projects() {
           </a>
         </div>
       </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eU64Wi9NWAw?si=vqGY071jIQ_CC1da"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+
+      <p>
+        שחכתי להגיד את זה בסירטון אז אני ארשום את זה פה... כל האתר או יותר נכון
+        הגירסאות של האתר היו מנוהלות ב GitHub מהתחלה ועד הסוף.
+      </p>
     </div>
   );
 }
