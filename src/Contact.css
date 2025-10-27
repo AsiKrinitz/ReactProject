@@ -57,3 +57,156 @@
   margin-bottom: 15px;
   border-radius: 2px;
 }
+
+/* Resume Section Styling */
+.resumeSection {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background: rgba(46 46 46 / 95%);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  max-width: 600px;
+  width: 100%;
+}
+
+.resumeTitle {
+  font-size: 2rem;
+  color: #667eea;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.resumeTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+.resumeButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.resumeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resumeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.resumeButton:hover::before {
+  left: 100%;
+}
+
+.resumeButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
+}
+
+.resumeButton:active {
+  transform: translateY(-2px);
+}
+
+.resumeButton.hebrew {
+  direction: rtl;
+}
+
+.resumeButton.english {
+  direction: ltr;
+}
+
+.resumeButton .icon {
+  font-size: 1.5rem;
+}
+
+.resumeButton .text {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resumeSection {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .resumeTitle {
+    font-size: 1.7rem;
+  }
+
+  .resumeButton {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .resumeButton .icon {
+    font-size: 1.3rem;
+  }
+
+  .resumeButton .text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumeSection {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .resumeTitle {
+    font-size: 1.5rem;
+  }
+
+  .resumeButtons {
+    gap: 1rem;
+  }
+
+  .resumeButton {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .resumeButton .icon {
+    font-size: 1.2rem;
+  }
+
+  .resumeButton .text {
+    font-size: 1rem;
+  }
+}
