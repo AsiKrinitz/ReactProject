@@ -16,7 +16,7 @@ function Contact() {
         <h3 className="resumeTitle">קורות חיים</h3>
         <div className="resumeButtons">
           <a
-            href="/ReactProject/src/assets/files/AsiKrinitzHebrew.2025.10.27.pdf"
+            href={`${import.meta.env.BASE_URL}AsiKrinitzHebrew.2025.10.27.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="resumeButton hebrew"
@@ -25,9 +25,10 @@ function Contact() {
             <span className="text">גרסה בעברית</span>
           </a>
           <a
-            href="/ReactProject/src/assets/files/AsiKrinitzEnglish.2025.10.27.pdf"
+            href={`${import.meta.env.BASE_URL}AsiKrinitzEnglish.2025.10.27.pdf`}
             target="_blank"
             rel="noopener noreferrer"
+            sadada
             className="resumeButton english"
           >
             <span className="icon">📄</span>
