@@ -28,7 +28,6 @@ function Contact() {
             href={`${import.meta.env.BASE_URL}AsiKrinitzEnglish.2025.10.27.pdf`}
             target="_blank"
             rel="noopener noreferrer"
-            sadada
             className="resumeButton english"
           >
             <span className="icon">📄</span>

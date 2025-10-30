@@ -1,0 +1,117 @@
+:root {
+  --bg: #0d0d0d; /* dark background */
+  --fg: #f0f0f0; /* light text */
+  --accent: #9300dfc4; /* accent color */
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  color: var(--fg);
+  text-align: right; /* RTL support */
+  background-color: var(--bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--accent);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Container for side images and content */
+.content-with-images {
+  display: flex;
+  gap: 40px;
+  max-width: 1800px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Side images columns */
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 0 400px; /* Fixed width - increased from 250px */
+}
+
+.imageColumn img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageColumn img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Center content card */
+.intro-card {
+  background-color: #111;
+  padding: 40px 30px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 700px;
+  max-width: 1000px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-card p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--fg);
+}
+
+.intro-card p strong {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.intro-card p strong:hover {
+  color: #e67e22; /* subtle hover for interactivity */
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  /* Hide side images on smaller screens */
+  .imageColumn {
+    display: none;
+  }
+
+  .content-with-images {
+    justify-content: center;
+  }
+
+  .intro-card {
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.2rem;
+  }
+
+  .intro-card {
+    padding: 30px 20px;
+  }
+
+  .intro-card p {
+    font-size: 1.1rem;
+  }
+}

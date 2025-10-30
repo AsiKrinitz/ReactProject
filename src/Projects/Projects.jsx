@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { SiAngular, SiNodedotjs, SiMongodb } from "react-icons/si";
 import { motion } from "framer-motion";
 
-import JobFinderLogo from "./assets/JobfinderLogoNew.png";
+import JobFinderLogo from "../assets/JobfinderLogoNew.png";
 
 function Projects() {
   return (

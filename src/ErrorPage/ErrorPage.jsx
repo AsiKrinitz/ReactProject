@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ErrorPage.css";
 
-export function ErrorPage() {
+function ErrorPage() {
   return (
     <div className="errorPage">
       <div className="errorCard container">
@@ -23,3 +23,5 @@ export function ErrorPage() {
     </div>
   );
 }
+
+export default ErrorPage;
