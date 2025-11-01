@@ -14,3 +14,42 @@
 .footer p {
   margin: 0;
 }
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.social-links li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.social-links img {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.15);
+}
