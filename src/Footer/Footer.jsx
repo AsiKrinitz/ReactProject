@@ -19,6 +19,7 @@ function Footer() {
             />
           </a>
         </li>
+
         <li>
           <a
             href="https://www.instagram.com/asikrinitz/"
@@ -29,6 +30,20 @@ function Footer() {
             <img
               alt="Instagram icon"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/769px-Instagram-Icon.png"
+            />
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.linkedin.com/in/asi-krinitz-25351223b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            לינקדאין&nbsp;
+            <img
+              alt="LinkedIn icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
             />
           </a>
         </li>
