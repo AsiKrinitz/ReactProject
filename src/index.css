@@ -3,11 +3,17 @@
   --globalTextColor: white;
 }
 
+/* make box-sizing consistent across the app (prevents width/padding overflow) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body,
 html,
 #root {
   direction: rtl;
-  box-sizing: border-box;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -16,7 +22,22 @@ html,
   font-family: Arial, sans-serif;
 }
 
+/* prevent accidental horizontal overflow from small layout bugs */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ensure app root doesn't force a larger min-width when children are flex items */
+.appRoot {
+  min-width: 0;
+}
+
+.content {
+  width: 100%;
+}
+
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
 }
