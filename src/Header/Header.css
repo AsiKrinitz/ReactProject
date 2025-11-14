@@ -1,17 +1,50 @@
 /* Header container */
 .header {
-  background: linear-gradient(90deg, #000000, #9300dfc4);
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
   color: white;
-  padding: 20px 0;
+  padding: 25px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Title */
 .header-title {
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(187, 134, 252, 0.5),
+    0 0 20px rgba(187, 134, 252, 0.3), 0 0 30px rgba(187, 134, 252, 0.2);
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.header-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #bb86fc,
+    #03dac6,
+    transparent
+  );
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.8);
 }
 
 /* Navigation links */
@@ -20,33 +53,108 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
-  margin-top: 15px;
+  flex-wrap: wrap;
+  margin: 0;
   padding: 0;
+  gap: 15px;
 }
 
 .nav-links li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 .nav-links li a {
-  color: #ffca00;
+  color: #e0e0e0;
   text-decoration: none;
-  font-weight: 800;
-  padding: 8px 12px;
+  font-weight: 500;
+  padding: 12px 25px;
   transition: all 0.3s ease;
-  font-size: 30px;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(187, 134, 252, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.nav-links li a:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  background: rgba(187, 134, 252, 0.15);
+  border-color: #bb86fc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+  color: #bb86fc;
+}
+
+.nav-links li a:active {
+  transform: translateY(0);
+}
+
+/* Active link style */
+.nav-links li a.active {
+  background: linear-gradient(135deg, #bb86fc 0%, #9965f4 100%);
+  color: white;
+  border-color: #bb86fc;
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.5);
+}
+
+/* Icon styling */
+.nav-icon {
+  width: 1.2em;
+  height: 1.2em;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.nav-links li a:hover .nav-icon {
+  transform: scale(1.2) rotate(5deg);
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .header {
-    padding: 15px 10px;
+    padding: 20px 20px;
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 15px;
   }
 
   .header-title {
@@ -54,28 +162,18 @@
   }
 
   .nav-links {
-    flex-direction: column; /* stack the links vertically */
-    gap: 10px;
-    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
   }
 
   .nav-links li {
-    margin: 5px 0;
+    width: 100%;
   }
 
   .nav-links li a {
+    width: 100%;
+    justify-content: center;
     font-size: 1rem;
-  }
-}
-
-/* Very small screens (e.g., phones in portrait) */
-@media (max-width: 480px) {
-  .header-title {
-    font-size: 1.3rem;
-  }
-
-  .nav-links li a {
-    font-size: 0.95rem;
-    padding: 6px 10px;
+    padding: 12px 20px;
   }
 }

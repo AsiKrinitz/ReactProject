@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Home from "./Home/Home";
-import Secret from "./Secret/Secret";
 import Contact from "./Contact/Contact";
 import Projects from "./Projects/Projects";
 import ErrorPage from "./ErrorPage/ErrorPage";
@@ -21,7 +20,6 @@ function App() {
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/secret" element={<Secret />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="*" element={<ErrorPage />} />

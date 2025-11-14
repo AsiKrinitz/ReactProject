@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaHome, FaCode, FaEnvelope } from "react-icons/fa";
 import "./Header.css";
 
 function Header() {
@@ -8,13 +9,22 @@ function Header() {
       <nav>
         <ul className="nav-links">
           <li>
-            <Link to="/">בית</Link>
+            <Link to="/">
+              <FaHome className="nav-icon" aria-hidden="true" />
+              בית
+            </Link>
           </li>
           <li>
-            <Link to="/projects">פרויקטים</Link>
+            <Link to="/projects">
+              <FaCode className="nav-icon" aria-hidden="true" />
+              פרויקטים
+            </Link>
           </li>
           <li>
-            <Link to="/contact">צור קשר</Link>
+            <Link to="/contact">
+              <FaEnvelope className="nav-icon" aria-hidden="true" />
+              צור קשר
+            </Link>
           </li>
         </ul>
       </nav>

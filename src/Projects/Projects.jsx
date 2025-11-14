@@ -8,13 +8,6 @@ import JobFinderLogo from "../assets/JobfinderLogoNew.png";
 function Projects() {
   return (
     <div className="projectsSection">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        💼 הפרויקטים שלי
-      </motion.h1>
       <div className="projectCard">
         {/* --- Title + Subtitle --- */}
         <div className="projectTitleGroup">
@@ -58,12 +51,14 @@ function Projects() {
         </div>
 
         <ul className="featuresList">
-          <li>הרשמה והתחברות עם שמירה למסד נתונים</li>
+          <li>הרשמה והתחברות מאובטחת</li>
           <li>יצירת קורות חיים וניהול פרופיל אישי</li>
           <li>הוספת משרות חדשות ועריכתן ע"י מעסיקים</li>
           <li>ממשק ניהול ייעודי למעסיקים</li>
           <li>חיפוש וסינון משרות לפי תחום או מיקום</li>
         </ul>
+
+        <h4>קישורים לפרויירט ב - GitHub</h4>
 
         <div className="links">
           <a

@@ -1,68 +1,22 @@
-/* ===== Global Styles (Minimal & Clean) ===== */
 :root {
-  --bg: #000;
-  --fg: #fff;
-}
-
-/* Direction & Reset */
-html {
-  direction: rtl;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+  --globalBackGround: #1e1e1e;
+  --globalTextColor: white;
 }
 
 body,
 html,
 #root {
+  direction: rtl;
+  box-sizing: border-box;
   height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--globalBackGround);
+  color: var(--globalTextColor);
   font-family: Arial, sans-serif;
 }
 
-/* ===== Common Layout ===== */
-.appRoot {
-  min-height: 100vh;
-  background: var(--bg);
-  color: var(--fg);
-}
-/* Make app a column flex layout so footer can sit after content (sticky footer) */
-.appRoot {
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 1 0 auto; /* allow main content to grow and push footer to bottom */
-}
-
-/* ===== Utility Containers ===== */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* ===== Basic Elements ===== */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  outline: none;
+p {
+  font-size: 20px;
+  line-height: 1.5;
 }

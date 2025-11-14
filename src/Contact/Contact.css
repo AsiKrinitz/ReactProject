@@ -1,212 +1,254 @@
 .contactImage {
-  direction: rtl; /* RTL support */
-  text-align: center;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 60px 20px;
-  color: var(--fg);
-  background-color: var(--bg);
+  gap: 40px;
 }
 
 .contactImage h1 {
   font-size: 3rem;
-  margin-bottom: 25px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: var(--fg);
+  font-weight: 300;
+  margin: 0;
+  background: linear-gradient(135deg, #bb86fc 0%, #03dac6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
 }
 
 .contactName {
   font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #9300dfc4; /* Accent color */
-}
-
-.contactCard {
-  background-color: #111; /* slightly lighter black for contrast */
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.contactCard p {
-  font-size: 1.4rem;
-  margin: 0;
   font-weight: 500;
-  color: var(--fg);
-  transition: color 0.3s ease;
+  color: #e0e0e0;
+  margin: 0;
+  text-align: center;
 }
 
-.contactCard p:hover {
-  color: #9300dfc4; /* accent color on hover */
-}
-
-/* Optional: subtle separator line */
-.contactCard::before {
-  content: "";
-  width: 60px;
-  height: 2px;
-  background-color: #9300dfc4;
-  margin-bottom: 15px;
-  border-radius: 2px;
-}
-
-/* Resume Section Styling */
-.resumeSection {
-  margin-top: 3rem;
-  padding: 2.5rem;
-  background: rgba(46 46 46 / 95%);
-  backdrop-filter: blur(10px);
+/* Contact Card */
+.contactCard {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
   border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  padding: 40px 60px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 2px solid #bb86fc;
+  position: relative;
+  overflow: hidden;
   max-width: 600px;
   width: 100%;
 }
 
+.contactCard::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #bb86fc, #03dac6, #bb86fc);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contactCard:hover::before {
+  opacity: 0.3;
+}
+
+.contactCard p {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contactCard p:hover {
+  transform: translateX(-10px);
+  color: #bb86fc;
+}
+
+.contactCard p::before {
+  content: "●";
+  color: #03dac6;
+  font-size: 1.5rem;
+}
+
+/* Resume Section */
+.resumeSection {
+  background: #2a2a2a;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3a3a3a;
+}
+
 .resumeTitle {
   font-size: 2rem;
-  color: #667eea;
+  font-weight: 400;
+  color: #bb86fc;
+  margin: 0 0 30px 0;
   text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 700;
   position: relative;
+  padding-bottom: 15px;
 }
 
 .resumeTitle::after {
   content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  margin: 0.8rem auto 0;
-  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #bb86fc, transparent);
 }
 
 .resumeButtons {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: stretch;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .resumeButton {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
+  gap: 12px;
+  padding: 18px 35px;
+  border-radius: 12px;
   text-decoration: none;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  font-size: 1.1rem;
+  font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border: 2px solid transparent;
+  min-width: 220px;
+  justify-content: center;
 }
 
 .resumeButton::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.5s ease;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
 }
 
 .resumeButton:hover::before {
-  left: 100%;
-}
-
-.resumeButton:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
-}
-
-.resumeButton:active {
-  transform: translateY(-2px);
-}
-
-.resumeButton.hebrew {
-  direction: rtl;
-}
-
-.resumeButton.english {
-  direction: ltr;
+  width: 300px;
+  height: 300px;
 }
 
 .resumeButton .icon {
   font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .resumeButton .text {
-  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.resumeButton:hover .icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Hebrew Version */
+.resumeButton.hebrew {
+  background: linear-gradient(135deg, #bb86fc 0%, #9965f4 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+}
+
+.resumeButton.hebrew:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(187, 134, 252, 0.6);
+  border-color: #bb86fc;
+}
+
+/* English Version */
+.resumeButton.english {
+  background: linear-gradient(135deg, #03dac6 0%, #00b4a0 100%);
+  color: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(3, 218, 198, 0.4);
+}
+
+.resumeButton.english:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(3, 218, 198, 0.6);
+  border-color: #03dac6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contactImage {
+    padding: 40px 20px;
+  }
+
+  .contactImage h1 {
+    font-size: 2.5rem;
+  }
+
+  .contactName {
+    font-size: 1.5rem;
+  }
+
+  .contactCard {
+    padding: 30px 40px;
+  }
+
+  .contactCard p {
+    font-size: 1.1rem;
+  }
+
   .resumeSection {
-    padding: 2rem;
-    margin-top: 2rem;
+    padding: 30px;
   }
 
   .resumeTitle {
     font-size: 1.7rem;
   }
 
+  .resumeButtons {
+    flex-direction: column;
+  }
+
   .resumeButton {
-    padding: 1.2rem 1.5rem;
-  }
-
-  .resumeButton .icon {
-    font-size: 1.3rem;
-  }
-
-  .resumeButton .text {
-    font-size: 1.1rem;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .resumeSection {
-    padding: 1.5rem;
-    margin-top: 1.5rem;
+  .contactImage h1 {
+    font-size: 2rem;
   }
 
-  .resumeTitle {
-    font-size: 1.5rem;
+  .contactCard {
+    padding: 25px 30px;
   }
 
-  .resumeButtons {
-    gap: 1rem;
-  }
-
-  .resumeButton {
-    padding: 1rem;
+  .contactCard p {
     font-size: 1rem;
   }
 
-  .resumeButton .icon {
-    font-size: 1.2rem;
+  .resumeSection {
+    padding: 25px;
   }
 
-  .resumeButton .text {
+  .resumeButton {
+    padding: 15px 25px;
     font-size: 1rem;
   }
 }
