@@ -10,9 +10,32 @@ import Asi6 from "../assets/Asi6.jpeg";
 import Asi7 from "../assets/Asi7.jpeg";
 import Asi8 from "../assets/Asi8.jpeg";
 import Asi9 from "../assets/Asi9.jpeg";
-import Asi10 from "../assets/Asi10.jpeg";
+import Asi10 from "../assets/Asi10.jpg";
+import Asi11 from "../assets/Asi11.jpg";
+import Asi12 from "../assets/Asi12.jpg";
+import Asi13 from "../assets/Asi13.jpg";
+import Asi14 from "../assets/Asi14.jpg";
+import Asi15 from "../assets/Asi15.jpg";
+import Asi16 from "../assets/Asi16.jpg";
 
-const photos = [Asi1, Asi2, Asi3, Asi4, Asi5, Asi6, Asi7, Asi8, Asi9, Asi10];
+const photos = [
+  Asi1,
+  Asi2,
+  Asi3,
+  Asi4,
+  Asi5,
+  Asi6,
+  Asi7,
+  Asi8,
+  Asi9,
+  Asi10,
+  Asi11,
+  Asi12,
+  Asi13,
+  Asi14,
+  Asi15,
+  Asi6,
+];
 
 function Home() {
   const [randomPhoto, setRandomPhoto] = useState("");

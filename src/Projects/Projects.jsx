@@ -56,6 +56,7 @@ function Projects() {
           <li>הוספת משרות חדשות ועריכתן ע"י מעסיקים</li>
           <li>ממשק ניהול ייעודי למעסיקים</li>
           <li>חיפוש וסינון משרות לפי תחום או מיקום</li>
+          <li>תאימות תצוגה גם למובייל</li>
         </ul>
 
         <h4>קישורים לפרויירט ב - GitHub</h4>
@@ -95,6 +96,58 @@ function Projects() {
         שכחתי להגיד את זה בסירטון אז אני ארשום את זה פה... כל האתר או יותר נכון
         הגירסאות של האתר היו מנוהלות ב GitHub מהתחלה ועד הסוף.
       </p>
+
+      <br></br>
+
+      <div className="projectCard">
+        {/* --- Title + Subtitle --- */}
+        <div className="projectTitleGroup">
+          <h2 className="mainTitle"> אתר תדמית שלי (האתר הזה)</h2>
+          <h3 className="subTitle">אתר תדמית אישי ונחמד</h3>
+        </div>
+
+        <p>
+          אתר רספונסיבי שבניתי כדי להציג את עצמי, הפרויקטים שלי, מידע מקצועי
+          וקורות חיים. האתר נבנה ב-React, בעיקר כי רציתי ללמוד את את הטכנולוגיה
+          הזו, ואז חבר סיפר לי על האפשרות לעלות אתרים ל - GitHub pages מפה לשם
+          עפתי גם על React לגמרי!
+        </p>
+
+        {/* --- Technologies Section --- */}
+        <div className="techIcons">
+          <div className="techItem">
+            <SiAngular />
+            <h4>Frontend</h4>
+            <p>React (Vite)</p>
+          </div>
+          <div className="techItem">
+            <FaGithub />
+            <h4>Version Control</h4>
+            <p>Git & GitHub</p>
+          </div>
+          {/* Add more as needed, e.g. CSS, etc. */}
+        </div>
+
+        <ul className="featuresList">
+          <li>עמודי פרויקטים עם מידע מלא</li>
+          <li>אפשרות לצפיה ולהורדה של קורות חיים</li>
+          <li>עיצוב נקי ומותאם לכל מסך גם למובייל</li>
+          <li>תמונות יפות שלי שכל פעם מתחלפות, שמתם לב לזה?</li>
+        </ul>
+
+        <h4>קישור לפרוייקט ב-GitHub</h4>
+
+        <div className="links">
+          <a
+            href="https://github.com/AsiKrinitz/ReactProject" // Put correct repo here
+            target="_blank"
+            rel="noopener noreferrer"
+            className="githubBtn"
+          >
+            <FaGithub /> Repository
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
