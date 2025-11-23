@@ -34,7 +34,7 @@ const photos = [
   Asi13,
   Asi14,
   Asi15,
-  Asi6,
+  Asi16,
 ];
 
 function Home() {

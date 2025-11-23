@@ -62,6 +62,17 @@
     justify-self: center;
   }
 
+  /* Place image above text on narrow screens */
+  .profile-image {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .text-content {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
   .home-title {
     font-size: 2rem;
   }
@@ -74,6 +85,20 @@
 
   .intro-card {
     padding: 25px;
+  }
+
+  /* ensure image sits above text on very small screens */
+  .profile-image {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+    margin-bottom: 12px;
+    max-width: 420px;
+  }
+
+  .text-content {
+    grid-row: 2;
+    grid-column: 1;
   }
 
   .home-title {
