@@ -36,7 +36,7 @@ function Projects() {
           <div className="techItem">
             <SiNodedotjs />
             <h4>Backend</h4>
-            <p>Node</p>
+            <p>Node.js with Express</p>
           </div>
           <div className="techItem">
             <SiMongodb />
