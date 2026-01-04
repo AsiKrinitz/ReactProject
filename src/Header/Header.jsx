@@ -23,7 +23,7 @@ function Header() {
           <li>
             <Link to="/contact">
               <FaEnvelope className="nav-icon" aria-hidden="true" />
-              צור קשר
+              צור קשר/קורות חיים
             </Link>
           </li>
         </ul>
