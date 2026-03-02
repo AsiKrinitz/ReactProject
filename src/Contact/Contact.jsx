@@ -16,7 +16,7 @@ function Contact() {
         <h3 className="resumeTitle">קורות חיים</h3>
         <div className="resumeButtons">
           <a
-            href={`${import.meta.env.BASE_URL}AsiKrinitzHebrew.pdf`}
+            href={`${import.meta.env.BASE_URL}AsiKrinitzFullStackHebrew.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="resumeButton hebrew"
@@ -25,7 +25,7 @@ function Contact() {
             <span className="text">גרסה בעברית</span>
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}AsiKrinitzEnglish.pdf`}
+            href={`${import.meta.env.BASE_URL}AsiKrinitzFullStack.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="resumeButton english"
