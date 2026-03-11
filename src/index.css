@@ -22,10 +22,17 @@ html,
   font-family: Arial, sans-serif;
 }
 
-/* prevent accidental horizontal overflow from small layout bugs */
+/* prevent accidental horizontal overflow from small layout bugs and hide scrollbars */
 html,
 body {
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* ensure app root doesn't force a larger min-width when children are flex items */

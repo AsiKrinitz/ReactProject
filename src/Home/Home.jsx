@@ -1,10 +1,11 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Asi1 from "../assets/Asi1.jpg";
 import Asi2 from "../assets/Asi2.jpg";
 import Asi3 from "../assets/Asi3.jpg";
-import Asi4 from "../assets/Asi4.jpg";
+import Asi4 from "../assets/Asi4.jpeg";
 import Asi5 from "../assets/Asi5.jpeg";
 import Asi6 from "../assets/Asi6.jpeg";
 import Asi7 from "../assets/Asi7.jpeg";
@@ -17,6 +18,7 @@ import Asi13 from "../assets/Asi13.jpg";
 import Asi14 from "../assets/Asi14.jpg";
 import Asi15 from "../assets/Asi15.jpg";
 import Asi16 from "../assets/Asi16.jpg";
+import Asi17 from "../assets/Asi17.jpeg";
 
 const photos = [
   Asi1,
@@ -35,6 +37,7 @@ const photos = [
   Asi14,
   Asi15,
   Asi16,
+  Asi17
 ];
 
 function Home() {
@@ -46,68 +49,72 @@ function Home() {
   }, []);
 
   return (
-    <div className="home">
-      <h1 className="home-title">אהלן חברים! ברוכים הבאים לאתר שלי 👋</h1>
-
-      <div className="intro-card">
-        <div className="text-content">
-          <h2 className="sub-title">קצת עליי</h2>
-          <p>
-            נעים להכיר, אני <strong>אסי קריניץ</strong>, בן 29 מקריית חיים, חי
-            עם בת זוגתי המדהימה והכלב שלנו ♥
-            <br />
-            כבר שלוש שנים אני עובד כ<strong>מפתח Full Stack</strong> בבית התוכנה{" "}
-            <strong>GoNet</strong> – תפקיד שאני באמת נהנה ממנו. אני אוהב ליצור,
-            ללמוד ולהפוך רעיון לקוד שעובד.
-          </p>
-
-          <p>
-            את דרכי המקצועית התחלתי אחרי שסיימתי לימודי{" "}
-            <strong>הנדסאי תוכנה</strong> במכללת אורט ביאליק, שם גם השתתפתי
-            בתוכנית מצוינות של המכללה. במהלך הלימודים הצלחתי להשתלב בעבודה
-            הראשונה שלי כמתכנת – תפקיד שבו אני נמצא עד היום.
-          </p>
-
-          <p>
-            בעבודה שלי אני משתמש על בסיס יומיומי ב:
-            <br />
-            <strong>Angular</strong> - Frontend
-            <br />
-            <strong>Asp.Net</strong> - Backend
-            <br />
-            <strong>SQL Server</strong> - Database
-            <br />
-            <strong>GitHub</strong> - Version Control
-          </p>
-
-          <p>
-            לאחרונה הרחבתי את הידע שלי גם לתחום החומרה והמערכות, במסגרת קורס{" "}
-            <strong>טכנאי מחשבים</strong> במכללה למנהל בחיפה, אז יצא שאני גם
-            מתכנת וגם טכנאי מחשבים =)
-          </p>
-
-          <p>
-            חוץ מעולם התכנות והמחשבים, אני אוהב לשחק פינג פונג ואני גם מתאמן
-            באופן קבוע, לפני זה התאמנתי תקופה באיגרוף תאילנדי וגם MMA ובכללי אני
-            אוהב לצפות ב UFC, ואני יודע שזה שילוב מוזר אבל אני גם משוגע על שחמט!
-            <br></br>
-            בנוסף בשנה האחרונה ניכנסתי לעולם שוק ההון, השקעות ומסחר, לקחתי את זה
-            מאוד ברצינות וכמו כל דבר שאני עושה בחיים אני מנסה לעשות הכי טוב שאני
-            יכול! וגם מתי שלא הולך אני לא מוותר, לומד מטעויות וממשיך הלאה!
-            <br></br>
-            וכמובן שאני חולה על לטייל בארץ המדהימה שלנו ובעולם כולו!
-          </p>
-
-          <p>
-            עכשיו אני מחפש את האתגר הבא שלי – מקום שאוכל להמשיך לצמוח בו, ללמוד
-            ולהשפיע.
-            <br></br>
-            אם אהבתם את מה שקראתם ומרגישים שאוכל להשתלב אצלכם, אשמח לשוחח ♥
-          </p>
+    <div className="home-wrapper">
+      <div className="home-dashboard">
+        
+        {/* Left Column: Image & Quick Stats */}
+        <div className="profile-column">
+          <div className="image-card">
+            {randomPhoto && (
+              <img src={randomPhoto} alt="אסי קריניץ" className="profile-pic" />
+            )}
+            <div className="image-halo"></div>
+          </div>
         </div>
-        {randomPhoto && (
-          <img src={randomPhoto} alt="אסי קריניץ" className="profile-image" />
-        )}{" "}
+
+        {/* Right Column: Main Content */}
+        <div className="content-column">
+          <header className="hero-header">
+            <h1 className="hero-heading">
+              אהלן, אני <span className="gradient-text">אסי קריניץ</span> 👋
+            </h1>
+            <h2 className="hero-subheading">Full Stack Developer</h2>
+          </header>
+
+          <section className="about-section slide-up">
+            <p className="lead-text">
+              מפתח תוכנה מנוסה עם מעל ל-<strong>3 שנות ניסיון</strong> בפיתוח ותחזוקת מערכות 
+              SaaS ויישומי Web עבור סביבות Production וללקוחות אנטרפרייז גדולים.
+            </p>
+            <p className="details-text">
+              יש לי ניסיון מעשי רב בהובלת פיצ'רים מקצה לקצה: החל מעיצוב ופיתוח ממשק משתמש (UI/UX) ב-<strong>Angular ו-React</strong>, דרך כתיבת לוגיקה עסקית מורכבת ו-REST APIs ב-<strong>ASP.NET MVC ו-Node.js</strong>, ועד לתכנון יעיל וטיוב ביצועים במסדי נתונים של <strong>SQL Server</strong>. 
+            </p>
+            <p className="details-text">
+              אני ידוע בכתיבת <strong>קוד נקי, תחזוקתי ויעיל</strong>, בעל יכולת למידה מהירה ועצמאית, מיומן ברפקטורינג של קוד קיים, אינטגרציות מורכבות (כגון מערכות סליקה מתקדמות - Tranzila, מערכות SMS, מיילים ועוד) ומחפש תמיד כיצד לשפר את יציבות המערכת וחווית המשתמש.
+            </p>
+          </section>
+
+          <div className="stats-grid slide-up-delayed">
+            <div className="stat-box">
+              <span className="stat-number">3+</span>
+              <span className="stat-label">שנות ניסיון</span>
+            </div>
+            <div className="stat-box">
+              <span className="stat-icon">🎓</span>
+              <span className="stat-label">הנדסאי תוכנה מצטיין</span>
+            </div>
+            <div className="stat-box">
+              <span className="stat-icon">💻</span>
+              <span className="stat-label">טכנאי מחשבים מוסמך</span>
+            </div>
+          </div>
+
+          <section className="tech-section slide-up-delayed-2">
+            <h3>Tech Stack מרכזי</h3>
+            <div className="tech-tags">
+              <span className="tag angular">Angular (v5-18)</span>
+              <span className="tag react">React</span>
+              <span className="tag ts">TypeScript</span>
+              <span className="tag csharp">C# / ASP.NET MVC</span>
+              <span className="tag node">Node.js (Express)</span>
+              <span className="tag sql">SQL Server</span>
+              <span className="tag mongo">MongoDB</span>
+              <span className="tag git">Git / GitHub</span>
+              <span className="tag iis">IIS</span>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
   );
