@@ -1,6 +1,6 @@
 import "./Projects.css";
 import { FaGithub } from "react-icons/fa";
-import { SiAngular, SiNodedotjs, SiMongodb } from "react-icons/si";
+import { SiAngular, SiNodedotjs, SiMongodb, SiReact } from "react-icons/si";
 import { motion } from "framer-motion";
 
 import JobFinderLogo from "../assets/JobfinderLogoNew.png";
@@ -118,9 +118,9 @@ function Projects() {
         {/* --- Technologies Section --- */}
         <div className="techIcons">
           <div className="techItem">
-            <SiAngular />
+            <SiReact />
             <h4>Frontend</h4>
-            <p>React (Vite)</p>
+            <p>React (TypeScript + Vite)</p>
           </div>
           <div className="techItem">
             <FaGithub />
@@ -147,6 +147,66 @@ function Projects() {
             className="githubBtn"
           >
             <FaGithub /> Repository
+          </a>
+        </div>
+      </div>
+
+      <br></br>
+
+      <div className="projectCard">
+        {/* --- Title + Subtitle --- */}
+        <div className="projectTitleGroup">
+          <h2 className="mainTitle">Asi Krinitz Fix PC</h2>
+          <h3 className="subTitle">שירותי טכנאי מחשבים</h3>
+        </div>
+
+        <p>
+          פרויקט אחרון שבניתי למתן שירותי טכנאות ותיקון מחשבים. 
+          האתר מציג בצורה ברורה את השירותים השונים שאני מציע, כולל מידע ליצירת קשר ופרטים על תקלות נפוצות.
+          <br></br>
+          הפרויקט נבנה מאפס בעזרת כלים מודרניים כדי להבטיח זמני טעינה מהירים וחוויית משתמש מעולה.
+        </p>
+
+        {/* --- Technologies Section --- */}
+        <div className="techIcons">
+          <div className="techItem">
+            <SiReact />
+            <h4>Frontend</h4>
+            <p>React (TypeScript + Vite)</p>
+          </div>
+          <div className="techItem">
+            <FaGithub />
+            <h4>Version Control</h4>
+            <p>Git & GitHub</p>
+          </div>
+        </div>
+
+        <ul className="featuresList">
+          <li>ממשק משתמש נקי ומזמין להצגת שירותי תיקון</li>
+          <li>התאמה מלאה למכשירים ניידים ולמסכים שונים</li>
+          <li>פיתוח מודרני מבוסס TypeScript ליציבות מרבית</li>
+          <li>פריסה וניהול מהירים דרך GitHub Pages</li>
+        </ul>
+
+        <h4>קישורים לפרוייקט</h4>
+
+        <div className="links">
+          <a
+            href="https://github.com/AsiKrinitz/AsiKrinitzPcFix"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="githubBtn"
+          >
+            <FaGithub /> Repository
+          </a>
+          <a
+            href="https://AsiKrinitz.github.io/AsiKrinitzPcFix/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="githubBtn"
+            style={{ backgroundColor: '#007bff' }}
+          >
+            Live Site
           </a>
         </div>
       </div>
