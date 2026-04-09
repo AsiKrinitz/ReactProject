@@ -1,6 +1,6 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 
 import Asi1 from "../assets/Asi1.jpg";
 import Asi2 from "../assets/Asi2.jpg";

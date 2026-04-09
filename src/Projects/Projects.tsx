@@ -1,7 +1,7 @@
 import "./Projects.css";
 import { FaGithub } from "react-icons/fa";
 import { SiAngular, SiNodedotjs, SiMongodb, SiReact } from "react-icons/si";
-import { motion } from "framer-motion";
+
 
 import JobFinderLogo from "../assets/JobfinderLogoNew.png";
 
@@ -153,6 +153,13 @@ function Projects() {
 
       <br></br>
 
+
+
+
+
+
+
+
       <div className="projectCard">
         {/* --- Title + Subtitle --- */}
         <div className="projectTitleGroup">
@@ -210,6 +217,8 @@ function Projects() {
           </a>
         </div>
       </div>
+
+
     </div>
   );
 }
