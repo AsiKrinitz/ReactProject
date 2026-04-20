@@ -4,6 +4,7 @@ import { SiAngular, SiNodedotjs, SiMongodb, SiReact } from "react-icons/si";
 
 
 import JobFinderLogo from "../assets/JobfinderLogoNew.png";
+import WebsiteLogo from "../assets/ak_logo2.png";
 
 function Projects() {
   return (
@@ -12,7 +13,7 @@ function Projects() {
         {/* --- Title + Subtitle --- */}
         <div className="projectTitleGroup">
           <img
-            className="projectLogo"
+            className="projectLogo fillLogo"
             src={JobFinderLogo}
             alt="JobFinder Logo"
           />
@@ -102,6 +103,78 @@ function Projects() {
       <div className="projectCard">
         {/* --- Title + Subtitle --- */}
         <div className="projectTitleGroup">
+          <img
+            className="projectLogo whiteBackground"
+            src={WebsiteLogo}
+            alt="Website Builder Logo"
+          />
+          <h2 className="mainTitle">Asi Website Builder</h2>
+          <h3 className="subTitle">בניית אתרי תדמית בעיצוב אישי</h3>
+        </div>
+
+        <p>
+          בניית אתרים מודרניים, רספונסיביים ומהירים המותאמים אישית לצרכי הלקוח. 
+          דגש על חוויית משתמש מעולה, עיצוב נקי וביצועים גבוהים כדי להבטיח נוכחות דיגיטלית מרשימה.
+          <br></br>
+          האתרים נבנים בטכנולוגיות המתקדמות ביותר תוך הקפדה על הפרטים הקטנים ביותר.
+        </p>
+
+        {/* --- Technologies Section --- */}
+        <div className="techIcons">
+          <div className="techItem">
+            <SiReact />
+            <h4>Frontend</h4>
+            <p>React (TypeScript + Vite)</p>
+          </div>
+          <div className="techItem">
+            <FaGithub />
+            <h4>Deployment</h4>
+            <p>GitHub Pages / Custom Domain</p>
+          </div>
+        </div>
+
+        <ul className="featuresList">
+          <li>עיצוב רספונסיבי מלא לכל המכשירים</li>
+          <li>רכישת דומיין והעלאת האתר לאוויר</li>
+          <li>אופטימיזציה ל-SEO ומהירות טעינה</li>
+          <li>ליווי אישי משלב האיפיון ועד שאתם מרוצים ואומרים לי חלאס האתר מושלם!</li>
+        </ul>
+
+        <h4>קישורים לפרוייקט</h4>
+
+        <div className="links">
+          <a
+            href="https://github.com/AsiKrinitz/AsiKrinitz.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="githubBtn"
+          >
+            <FaGithub /> Repository
+          </a>
+          <a
+            href="https://asikdesign.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="githubBtn"
+            style={{ backgroundColor: '#007bff' }}
+          >
+            Live Site
+          </a>
+        </div>
+      </div>
+
+      <br></br>
+
+
+
+
+
+
+
+
+      <div className="projectCard">
+        {/* --- Title + Subtitle --- */}
+        <div className="projectTitleGroup">
           <h2 className="mainTitle"> אתר תדמית שלי (האתר הזה)</h2>
           <h3 className="subTitle">אתר תדמית אישי ונחמד</h3>
         </div>
@@ -127,7 +200,6 @@ function Projects() {
             <h4>Version Control</h4>
             <p>Git & GitHub</p>
           </div>
-          {/* Add more as needed, e.g. CSS, etc. */}
         </div>
 
         <ul className="featuresList">
@@ -141,79 +213,12 @@ function Projects() {
 
         <div className="links">
           <a
-            href="https://github.com/AsiKrinitz/ReactProject" // Put correct repo here
+            href="https://github.com/AsiKrinitz/ReactProject"
             target="_blank"
             rel="noopener noreferrer"
             className="githubBtn"
           >
             <FaGithub /> Repository
-          </a>
-        </div>
-      </div>
-
-      <br></br>
-
-
-
-
-
-
-
-
-      <div className="projectCard">
-        {/* --- Title + Subtitle --- */}
-        <div className="projectTitleGroup">
-          <h2 className="mainTitle">Asi Krinitz Fix PC</h2>
-          <h3 className="subTitle">שירותי טכנאי מחשבים</h3>
-        </div>
-
-        <p>
-          פרויקט אחרון שבניתי למתן שירותי טכנאות ותיקון מחשבים. 
-          האתר מציג בצורה ברורה את השירותים השונים שאני מציע, כולל מידע ליצירת קשר ופרטים על תקלות נפוצות.
-          <br></br>
-          הפרויקט נבנה מאפס בעזרת כלים מודרניים כדי להבטיח זמני טעינה מהירים וחוויית משתמש מעולה.
-        </p>
-
-        {/* --- Technologies Section --- */}
-        <div className="techIcons">
-          <div className="techItem">
-            <SiReact />
-            <h4>Frontend</h4>
-            <p>React (TypeScript + Vite)</p>
-          </div>
-          <div className="techItem">
-            <FaGithub />
-            <h4>Version Control</h4>
-            <p>Git & GitHub</p>
-          </div>
-        </div>
-
-        <ul className="featuresList">
-          <li>ממשק משתמש נקי ומזמין להצגת שירותי תיקון</li>
-          <li>התאמה מלאה למכשירים ניידים ולמסכים שונים</li>
-          <li>פיתוח מודרני מבוסס TypeScript ליציבות מרבית</li>
-          <li>פריסה וניהול מהירים דרך GitHub Pages</li>
-        </ul>
-
-        <h4>קישורים לפרוייקט</h4>
-
-        <div className="links">
-          <a
-            href="https://github.com/AsiKrinitz/AsiKrinitzPcFix"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="githubBtn"
-          >
-            <FaGithub /> Repository
-          </a>
-          <a
-            href="https://AsiKrinitz.github.io/AsiKrinitzPcFix/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="githubBtn"
-            style={{ backgroundColor: '#007bff' }}
-          >
-            Live Site
           </a>
         </div>
       </div>

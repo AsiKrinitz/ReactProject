@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <h2>♥♥ כל הזכויות שמורות לאסי קריניץ ♥♥</h2>
+      <h2>כל הזכויות שמורות לאסי קריניץ</h2>
 
       <ul className="social-links">
         <li>

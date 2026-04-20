@@ -146,7 +146,7 @@
 .projectLogo {
   width: 150px;
   height: 150px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   margin-bottom: 12px;
   border-radius: 50%;
@@ -164,6 +164,18 @@
   box-shadow: 0 22px 44px rgba(0, 0, 0, 0.72),
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
   opacity: 1;
+}
+
+.projectLogo.whiteBackground {
+  background: #ffffff;
+  padding: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+}
+
+.projectLogo.fillLogo {
+  object-fit: cover;
+  padding: 0;
 }
 
 /* Mobile Responsive Styles */
