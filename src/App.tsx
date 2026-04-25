@@ -6,6 +6,7 @@ import Home from "./Home/Home";
 import Contact from "./Contact/Contact";
 import Projects from "./Projects/Projects";
 import ErrorPage from "./ErrorPage/ErrorPage";
+import { AsiFooter } from "./AsiFooter/AsiFooter";
 
 function App() {
   if (window.location.pathname === "/ReactProject") {
@@ -27,6 +28,7 @@ function App() {
         </main>
 
         <Footer />
+        <AsiFooter />
       </div>
     </Router>
   );
