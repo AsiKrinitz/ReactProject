@@ -1,6 +1,7 @@
 :root {
   --globalBackGround: #1e1e1e;
   --globalTextColor: white;
+  --primary: #bb86fc;
 }
 
 /* make box-sizing consistent across the app (prevents width/padding overflow) */
@@ -47,4 +48,59 @@ body {
 p {
   font-size: 18px;
   line-height: 1.5;
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Accessibility Support - Classes toggled by AccessibilityWidget */
+html.a11y-large-text {
+  font-size: 125% !important;
+}
+
+body.a11y-high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.a11y-high-contrast *:not(.a11y-widget):not(.a11y-widget *) {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+body.a11y-high-contrast .gradient-text {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+}
+
+body.a11y-high-contrast a, 
+body.a11y-high-contrast button:not(.close-btn):not(.a11y-trigger):not(.a11y-option) {
+  color: #ffff00 !important;
+  text-decoration: underline !important;
+  -webkit-text-fill-color: #ffff00 !important;
+}
+
+body.a11y-high-contrast img {
+  filter: grayscale(100%) contrast(150%) !important;
+}
+
+body.a11y-highlight-links a {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
+  text-decoration: underline !important;
+  background-color: rgba(255, 255, 0, 0.15) !important;
+  color: #ffff00 !important;
+  border-radius: 2px !important;
 }
